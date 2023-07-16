@@ -26,10 +26,39 @@
 <script>
 	// catch elements with dom.
 	let select= document.querySelector('select');
+	let number=document.querySelector('input');
 
 	let paragraph=document.querySelector('p');
 
-	let h3=document.querySelector('h3');
+	let heading=document.querySelector('h3');
+
+
+
+
+	// တစ်ခုခုကို ရွေးချယ်ပြီး အလုပ်လုပ်ချက်ချင်း လုပ်စေချင်ရင် event listener ကို အသုံးပြုသည်။
+
+	select.addEventListener('change',foods);
+	function foods(){
+		let choosen=select.value;
+		if(choosen==='Coffee'){
+			paragraph.textContent=choosen+" is so cool";
+			heading.textContent='Quality is '+number.value;
+		}else if(choosen==='snack'){
+				paragraph.textContent=choosen+" is so cool";
+				heading.textContent='Quality is '+number.value;
+		}else if(choosen==='juice'){
+			paragraph.textContent=choosen+" is so cool";
+			heading.textContent='Quality is '+number.value;
+		}else if(choosen==='chicken'){
+			paragraph.textContent=choosen+" is so cool";
+			heading.textContent='Quality is '+number.value;
+		}else{
+			paragraph.textContent=" special customer";
+			}
+
+
+
+	}
 
 	
 </script>

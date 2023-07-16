@@ -1,0 +1,69 @@
+<!-- nesting if else syntex.
+
+
+if(){
+	if(){
+	
+	}else if(){
+	
+	}else if{
+	
+	}else{
+	
+	}
+} -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modern shop</title>
+</head>
+<body>
+
+	<h1>Hello modern shop</h1>
+	<h3></h3>
+</body>
+<script>
+	//object.method
+	// window object > prompt method ကို ဖွင့်လိုက်ရင် စပြီး တစ်ခုခု ရွေးခိုင်စေချင်ရင် ‌ေရးသည်။ 
+	let name =window.prompt("Enter your choosen :Noodle or coffee");
+	alert("You have choosen" + name);
+
+	let h3=document.querySelector('h3');
+
+	if(name==='noodle'){
+		let noodleType=window.prompt("normal or special");
+		if(noodleType==='normal'){
+			h3.textContent='Normal Noodle';
+		}else if(noodleType==='special'){
+			let passcode=window.prompt("Please Enter Your Passcode");
+			if(passcode==='666'){
+				window.location.href='https://nainglinhtun553.github.io/nainglinhtun.profile/';
+		}else{
+			window.location.href='www.google.com';
+		}
+			}
+		}else{
+		h3.textContent='Coffee';
+	}
+
+
+
+</script>
+</html>
+
+<!-- 
+
+	if statement နဲ့ စစ်ရင် number တွေကို ထည့်စစ်ချင် '' ခံပေးရသည်။
+	အဘယ်ကြောင့်ဆိုသော် js က return ပြန်သောအခါ stwing နဲ့ ပြန်ပြီး စစ်ပေးသည်။ 
+
+တခြား page တစ်ခုကို ဆွဲခေါ်သွားစေချင်ရင် အောက်ပါအတိုင်း နည်းလမ်း ၂ ခုကို အသုံးပြုရသည်။
+
+window.location.replace()
+window.location.href= -->

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>snackshop</title>
+</head>
+<body>
+	<label for="food">Please select your Foods:</label>
+	<select name="" id="toEat">
+		<option value="">Please select here</option>
+		<option value="Coffee">Coffee</option>
+		<option value="snack">Snack</option>
+		<option value="juice">Juice</option>
+		<option value="chicken">chicken</option>
+
+	</select>
+
+	<label for="count">Quality:</label>
+	<input type="number" id="count" name="countNumber" value="0" min="1" max="1000">
+	<p></p>
+	<h3></h3>
+	
+</body>
+
+<script>
+	// catch elements with dom.
+	let select= document.querySelector('select');
+	let number=document.querySelector('input');
+
+	let paragraph=document.querySelector('p');
+
+	let heading=document.querySelector('h3');
+
+
+
+
+	// တစ်ခုခုကို ရွေးချယ်ပြီး အလုပ်လုပ်ချက်ချင်း လုပ်စေချင်ရင် event listener ကို အသုံးပြုသည်။
+
+	select.addEventListener('change',foods);
+	function foods(){
+		let choosen=select.value;
+		
+		switch(choosen){
+		case'snack':
+				paragraph.textContent=choosen+" is so cool";
+			heading.textContent='Quality is '+number.value;
+
+			break;
+		case 'coffee':
+				paragraph.textContent=choosen+" is so cool";
+			heading.textContent='Quality is '+number.value;
+			break;
+
+		case'juice':
+				paragraph.textContent=choosen+" is so cool";
+			heading.textContent='Quality is '+number.value;
+
+			break;
+		case 'chicken':
+				paragraph.textContent=choosen+" is so cool";
+			heading.textContent='Quality is '+number.value;
+			break;
+		default:
+				paragraph.textContent="This is from default";
+			heading.textContent='Quality is '+number.value;
+
+		}
+
+	}
+
+
+	// ဝင်လာမည့် အရေအတွက်များရင် if statement ကို အသုံးပြုသည်။
+	// ဝင်လာ်မည့်အရေအတွက်နည်းရင် switch statement ကို အသုံးပြုသည်။
+
+
+
+
+	
+</script>
+</html>

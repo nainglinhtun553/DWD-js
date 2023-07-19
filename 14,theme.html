@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Theme exerise</title>
+</head>
+<body>
+	<label for="theme">Select Your Theme</label>
+	<select name="" id="theme">
+		<option value="white">white</option>
+		<option value="black">black</option>
+		
+	</select>
+	<h1>Your Website</h1>
+	
+</body>
+<script>
+
+	const select=document.querySelector('select');
+	const html=document.querySelector('html');
+	
+
+// this is the main function. I must be noted this.
+	select.onchange=function(){
+		(select.value ==='black')?theme('black','white'):theme('white','black');
+	}
+	function theme(bgColor,textColor){
+		html.style.background=bgColor;
+		html.style.color=textColor;
+	}
+</script>
+</html>

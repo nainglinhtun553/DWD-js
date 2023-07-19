@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Theme exerise</title>
+</head>
+<body>
+	<label for="theme">Select Your Theme</label>
+	<select name="" id="theme">
+		<option value="white">white</option>
+		<option value="black">black</option>
+		<option value="pink">Pink</option>
+		<option value="green">green</option>
+	</select>
+	<h1>Your Website</h1>
+	<p></p>
+</body>
+<script>
+
+	const select=document.querySelector('select');
+	const html=document.querySelector('html');
+	const pTag=document.querySelector('p');
+
+// this is the main function. I must be noted this.
+	
+	function theme(bgColor,textColor){
+		html.style.background=bgColor;
+		html.style.color=textColor;
+	}
+
+	select.onchange=function(){
+		switch(select.value){
+		case 'white':
+			theme('white','black');
+			pTag.textContent=select.value + "theme is so amazing";
+			break;
+
+
+
+		case 'black':
+			theme('black','white');
+			pTag.textContent=select.value + "theme is so amazing";
+			break;
+
+
+
+		case 'pink':
+			theme('pink','blue');
+			pTag.textContent=select.value + "theme is so amazing";
+			break;
+
+
+
+
+		case 'green':
+			theme('green','white');
+			pTag.textContent=select.value + "theme is so amazing";
+			break;			
+
+
+		}
+	}
+</script>
+</html>
